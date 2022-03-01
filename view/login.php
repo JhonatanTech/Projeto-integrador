@@ -4,6 +4,7 @@
     .container.login {
         display: flex !important;
         margin-top: 20vh !important;
+        margin-bottom: 15vh !important;
     }
 </style>
 
@@ -17,7 +18,7 @@
                     <label for="username">Email</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="senha" type="password2" class="validate">
+                    <input id="senha" type="password">
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 center">
@@ -27,3 +28,5 @@
         </form>
     </div>
 </div>
+
+<?php include '../template/footer.html'; ?>
