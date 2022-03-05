@@ -7,7 +7,7 @@ include '../template/menu.html'; ?>
 
         <form class="col s12 ">
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12 m6">
                     <i class="material-icons prefix">title</i>
                     <select>
                         <option value="" disabled selected>Material</option>
@@ -16,17 +16,17 @@ include '../template/menu.html'; ?>
                         <option value="3">Sala de aula</option>
                     </select>
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col s12 m6">
                     <i class="material-icons prefix">pin</i>
                     <input id="qty" type="number" class="validate">
                     <label for="qty">Quantidade</label>
                 </div>
-                <div class="input-field col s12">
+                <div class="input-field col s12 m12">
                     <i class="material-icons prefix">edit</i>
                     <textarea id="obs" class="materialize-textarea" data-length="120"></textarea>
                     <label for="obs">Observação</label>
                 </div>
-                <div class="input-field col s12 center">
+                <div class="input-field col s12 m12 center">
                     <button type="submit" class="waves-effect waves-light btn-large pink">Solicitar</button>
                 </div>
             </div>

@@ -4,8 +4,7 @@ include '../template/menu.html'; ?>
 <div class="container">
     <div class="row">
         <h1 class="center-align">Estoque</h1>
-
-        <form class="col s12">
+        <form class="col s12 m12">
             <div class="row">
                 <div class="input-field col s3">
                     <i class="material-icons prefix">search</i>

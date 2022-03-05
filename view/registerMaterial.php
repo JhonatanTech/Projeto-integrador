@@ -7,12 +7,12 @@ include '../template/menu.html'; ?>
 
         <form class="col s12 ">
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12 m6">
                     <i class="material-icons prefix">title</i>
                     <input id="material" type="text" class="validate">
                     <label for="material">Material</label>
                 </div>
-                <div class="input-field col s3">
+                <div class="input-field col s12 m3">
                     <i class="material-icons prefix">category</i>
                     <select>
                         <option value="" disabled selected>Selecione a categoria</option>
@@ -21,12 +21,12 @@ include '../template/menu.html'; ?>
                         <option value="3">Sala de aula</option>
                     </select>
                 </div>
-                <div class="input-field col s3">
+                <div class="input-field col s12 m3">
                     <i class="material-icons prefix">pin</i>
                     <input id="qty" type="text" class="validate">
                     <label for="qty">Quantidade</label>
                 </div>
-                <div class="input-field col s12 center">
+                <div class="input-field col s12 m12 center">
                     <button type="submit" class="waves-effect waves-light btn-large pink">Cadastrar</button>
                 </div>
             </div>
