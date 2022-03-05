@@ -14,3 +14,4 @@ A proposta é um software para o gerenciamento do estoque/almoxarifado.
 ### Back-end
 * PHP
 * Mysql
+### Para executar o software é necessario o uso do wampserver ou xampp
