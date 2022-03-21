@@ -5,7 +5,7 @@ include '../template/menu.html'; ?>
     <div class="row">
         <h1 class="center-align">Histórico de retiradas</h1>
 
-        <table class="centered responsive-table striped">
+        <table class="centered responsive-table row">
             <thead>
                 <tr>
                     <th>Material</th>

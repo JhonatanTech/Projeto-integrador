@@ -4,17 +4,19 @@ include '../template/menu.html'; ?>
 <div class="container">
     <div class="row">
         <h1 class="center-align">Estoque</h1>
-        <form class="col s12 m12">
-            <div class="row">
-                <div class="input-field col s3">
-                    <i class="material-icons prefix">search</i>
-                    <input id="search" type="text" class="validate">
-                    <label for="search">Pesquisar</label>
+        <div class="row">
+            <form class="col s12 m12">
+                <div class="row">
+                    <div class="input-field col s12 m3">
+                        <i class="material-icons prefix">search</i>
+                        <input id="search" type="text" class="validate">
+                        <label for="search">Pesquisar</label>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
 
-        <table class="centered responsive-table">
+        <table class="centered responsive-table striped">
             <thead>
                 <tr>
                     <th>Id</th>

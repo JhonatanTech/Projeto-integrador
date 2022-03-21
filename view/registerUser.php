@@ -16,7 +16,6 @@ include '../template/menu.html'; ?>
                     <input id="sobrenome" type="text" class="validate">
                     <label for="sobrenome">Sobrenome</label>
                 </div>
-
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">person</i>
                     <input id="cpf" type="text" class="validate">
