@@ -1,6 +1,10 @@
 <?php include '../template/header.html';
 include '../template/menu.html'; ?>
 
+<?php
+include('verifica_login.php');
+?>
+
 <div class="container">
     <div class="row">
         <h1 class="center-align">Estoque</h1>
