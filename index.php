@@ -35,24 +35,25 @@ session_start();
 <div class="container login">
     <div class="row">
         <h2 class="center-align">Login</h2>
-        <form class="col s12">
+        <?php
+        if (isset($_SESSION['nao_autenticado'])) :
+        ?>
+            <div class="card-panel #e53935 red darken-1">
+                <span class="white-text">ERRO: Usuário ou senha inválidos.</span>
+            </div>
+        <?php
+        endif;
+        unset($_SESSION['nao_autenticado']);
+        ?>
+        <form class="col s12" action="App/login/login.php" method="POST">
             <div class="row">
-                <?php
-                if (isset($_SESSION['nao_autenticado'])) :
-                ?>
-                    <div class="card-panel #e53935 red darken-1">
-                        <span class="white-text">ERRO: Usuário ou senha inválidos.</span>
-                    </div>
-                <?php
-                endif;
-                unset($_SESSION['nao_autenticado']);
-                ?>
                 <div class="input-field col s12">
-                    <input id="username" type="text" class="validate">
-                    <label for="username">Usuário</label>
+                    <input name="usuario" id="usuario" type="text" class="validate" autofocus="">
+                    <label for="usuario">Usuário</label>
                 </div>
+
                 <div class="input-field col s12">
-                    <input id="senha" type="password">
+                    <input name="senha" id="senha" type="password">
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 center">

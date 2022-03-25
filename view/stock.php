@@ -1,8 +1,6 @@
 <?php include '../template/header.html';
-include '../template/menu.html'; ?>
-
-<?php
-include('verifica_login.php');
+include '../template/menu.html';
+include('../App/login/verifica_login.php');
 ?>
 
 <div class="container">
