@@ -27,8 +27,8 @@ session_start();
 <style>
     .container.login {
         display: flex !important;
-        margin-top: 15vh !important;
-        margin-bottom: 15vh !important;
+        /* margin-top: 15vh !important;
+        margin-bottom: 15vh !important; */
     }
 </style>
 
@@ -38,7 +38,7 @@ session_start();
         <?php
         if (isset($_SESSION['nao_autenticado'])) :
         ?>
-            <div class="card-panel #e53935 red darken-1">
+            <div class="card-panel red darken-1">
                 <span class="white-text">ERRO: Usuário ou senha inválidos.</span>
             </div>
         <?php
