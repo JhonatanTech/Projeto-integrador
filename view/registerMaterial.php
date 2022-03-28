@@ -1,33 +1,49 @@
-<?php include '../template/header.html';
-include '../template/menu.html'; ?>
+<?php
+
+include '../template/header.html';
+include '../template/menu.html';
+
+?>
 
 <div class="container">
     <div class="row">
         <h1 class="center-align">Cadastrar material</h1>
 
-        <form class="col s12 ">
+        <form class="col s12" action="../App/material/create.php" method="POST" enctype="multipart/form-data">
             <div class="row">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Imagem</span>
+                        <input type="file" required name="arquivo">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Selecione uma imagem para este produto">
+                    </div>
+                </div>
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">title</i>
-                    <input id="material" type="text" class="validate">
-                    <label for="material">Material</label>
+                    <input id="nome" name="nome" type="text" class="validate">
+                    <label for="nome">Nome do material</label>
                 </div>
-                <div class="input-field col s12 m3">
-                    <i class="material-icons prefix">category</i>
-                    <select>
-                        <option value="" disabled selected>Selecione a categoria</option>
-                        <option value="1">Limpeza</option>
-                        <option value="2">Direção</option>
-                        <option value="3">Sala de aula</option>
-                    </select>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">place</i>
+                    <input id="local" name="local" type="text" class="validate">
+                    <label for="local">Local de armazenamento</label>
                 </div>
+
                 <div class="input-field col s12 m3">
                     <i class="material-icons prefix">pin</i>
-                    <input id="qty" type="text" class="validate">
+                    <input id="qty" name="qty" type="number" class="validate">
                     <label for="qty">Quantidade</label>
                 </div>
+
+                <div class="input-field col s12 m12">
+                    <i class="material-icons prefix">edit</i>
+                    <input id="obs" name="obs" type="text" class="validate">
+                    <label for="obs">Observação</label>
+                </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" class="waves-effect waves-light btn-large pink">Cadastrar</button>
+                    <button type="submit" name="btn-cadastrar-material" class="waves-effect waves-light btn-large pink">Cadastrar</button>
                 </div>
             </div>
         </form>

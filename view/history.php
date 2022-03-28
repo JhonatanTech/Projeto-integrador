@@ -1,5 +1,9 @@
-<?php include '../template/header.html';
-include '../template/menu.html'; ?>
+<?php 
+
+include '../template/header.html';
+include '../template/menu.html';
+
+?>
 
 <div class="container">
     <div class="row">

@@ -1,5 +1,9 @@
-<?php include '../template/header.html';
-include '../template/menu.html'; ?>
+<?php 
+
+include '../template/header.html';
+include '../template/menu.html';
+
+?>
 
 <div class="container">
     <div class="row">
@@ -26,7 +30,14 @@ include '../template/menu.html'; ?>
                     <input id="contato" type="text" class="validate">
                     <label for="contato">Contato</label>
                 </div>
-                <div class="input-field col s12 m12">
+
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">work</i>
+                    <input id="funcao" type="text" class="validate">
+                    <label for="funcao">Função do usuário</label>
+                </div>
+
+                <div class="input-field col s12 m6">
                     <i class="material-icons prefix">email</i>
                     <input id="email" type="email" class="validate">
                     <label for="email">Email</label>
