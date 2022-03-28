@@ -17,7 +17,7 @@ include '../template/menu.html';
                         <input type="file" required name="arquivo">
                     </div>
                     <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Selecione uma imagem para este produto">
+                        <input class="file-path validate" type="text" placeholder="Selecione uma imagem para este material">
                     </div>
                 </div>
                 <div class="input-field col s12 m6">

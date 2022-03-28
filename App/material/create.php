@@ -14,10 +14,10 @@ function clear($input) {
 }
 
 if(isset($_POST['btn-cadastrar-material'])):
-	$nome = clear($_POST['nome']);
-	$local = clear($_POST['local']);
-	$qty = clear($_POST['qty']);
-	$obs = clear($_POST['obs']);
+	$nome 	= clear($_POST['nome']);
+	$local 	= clear($_POST['local']);
+	$qty 	= clear($_POST['qty']);
+	$obs 	= clear($_POST['obs']);
 
 	$extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensao do arquivo
 	$diretorio = "../../upload/"; //define o diretorio para onde enviaremos o arquivo

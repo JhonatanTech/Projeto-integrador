@@ -18,17 +18,15 @@ include '../App/material/db_connect.php';
 <div class="container">
     <div class="row">
         <h1 class="center-align">Estoque</h1>
-        <div class="row">
-            <form class="col s12 m12">
-                <div class="row">
-                    <div class="input-field col s12 m3">
-                        <i class="material-icons prefix">search</i>
-                        <input id="search" type="text" class="validate">
-                        <label for="search">Pesquisar</label>
-                    </div>
+        <form class="col s12 m12">
+            <div class="row">
+                <div class="input-field col s12 m3">
+                    <i class="material-icons prefix">search</i>
+                    <input id="search" type="text" class="validate">
+                    <label for="search">Pesquisar</label>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
 
         <table class="centered responsive-table striped">
             <thead>
@@ -46,7 +44,7 @@ include '../App/material/db_connect.php';
             <tbody>
 
                 <?php
-                $sql = "SELECT * FROM material";
+                $sql = "SELECT * FROM material ORDER BY id DESC";
                 $resultado = mysqli_query($connect, $sql);
 
                 if (mysqli_num_rows($resultado) > 0) :
@@ -61,10 +59,11 @@ include '../App/material/db_connect.php';
                             <td><?php echo $dados['nome']; ?></td>
                             <td><?php echo $dados['local']; ?></td>
                             <td><?php echo $dados['qtd']; ?></td>
-                            <td><?php echo $dados['obs']; ?></td>
+                            <td><a href="#obs-modal<?php echo $dados['id']; ?>" class="btn modal-trigger waves-effect waves-light">Observação</a></td>
+                            </td>
                             <td>
-                                <a href="editMaterial.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange waves-effect waves-light"><i class="material-icons">edit</i></a>
-                                <a href="#modal<?php echo $dados['id']; ?>" class="btn-floating red modal-trigger waves-effect waves-light"><i class="material-icons">delete</i></a>
+                                <a href="editMaterial.php?id=<?php echo $dados['id']; ?>" class="btn-floating orange waves-effect waves-light tooltipped" data-position="top" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                                <a href="#modal<?php echo $dados['id']; ?>" class="btn-floating red modal-trigger waves-effect waves-light tooltipped" data-position="right" data-tooltip="Deletar"><i class="material-icons">delete</i></a>
                             </td>
 
                             <!-- Modal Structure -->
@@ -81,6 +80,17 @@ include '../App/material/db_connect.php';
                                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
 
                                     </form>
+                                </div>
+                            </div>
+
+                            <!-- Modal Structure -->
+                            <div id="obs-modal<?php echo $dados['id']; ?>" class="modal">
+                                <div class="modal-content">
+                                    <h4>Observação</h4>
+                                    <p><?php echo $dados['obs']; ?></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
                                 </div>
                             </div>
 

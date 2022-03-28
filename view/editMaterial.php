@@ -52,7 +52,7 @@ endif;
                     <label for="obs">Observação</label>
                 </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" name="btn-editar-material" class="waves-effect waves-light btn-large pink">Cadastrar</button>
+                    <button type="submit" name="btn-editar-material" class="waves-effect waves-light btn-large pink">Atualizar</button>
                 </div>
             </div>
         </form>
