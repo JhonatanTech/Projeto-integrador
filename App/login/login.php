@@ -10,7 +10,7 @@ if (empty($_POST['usuario']) || empty($_POST['senha'])) {
 $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-//select email,cpf,senha from usuario where (email = 'jhonatancarvalhotorres12@gmail.com' or cpf = '501.720.748-19') and senha = MD5('12345')
+//select * from usuario where (email = 'jhonatancarvalhotorres12@gmail.com' or cpf = '501.720.748-19') and senha = MD5('123')
 
 $query = "select usuario from usuario where usuario = '{$usuario}' and senha = md5('{$senha}')";
 
