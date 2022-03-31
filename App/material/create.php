@@ -27,6 +27,10 @@ if(isset($_POST['btn-cadastrar-material'])):
 
 	$sql = "INSERT INTO material (nome, local, qtd, obs, imagem) VALUES ('$nome', '$local', '$qty', '$obs', '$novo_nome')";
 
+	var_dump($connect);
+	die();
+
+
 	if(mysqli_query($connect, $sql)):
 		$_SESSION['mensagem'] = "Cadastrado com sucesso!";
 		header('Location: ../../view/stock.php');

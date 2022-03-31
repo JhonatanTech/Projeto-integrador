@@ -64,4 +64,13 @@ session_start();
     </div>
 </div>
 
+<!-- Compiled and minified JavaScript -->
+<script src="js/materialize/materialize.js"></script>
+<script src="js/Materialize.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+<script>
+</script>
+
 <?php include 'template/footer.html'; ?>
