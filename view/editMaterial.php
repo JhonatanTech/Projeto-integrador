@@ -34,10 +34,17 @@ endif;
                     <input id="nome" name="nome" type="text" class="validate" value="<?php echo $dados['nome']; ?>">
                     <label for="nome">Nome do material</label>
                 </div>
+
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">place</i>
-                    <input id="local" name="local" type="text" class="validate" value="<?php echo $dados['local']; ?>">
-                    <label for="local">Local de armazenamento</label>
+                    <!-- <input id="local" name="local" type="text" class="validate"> -->
+                    <select id="local" name="local">
+                        <option value="" disabled selected>Local de armazenamento</option>
+                        <option>Direção</option>
+                        <option>Limpeza</option>
+                        <option>Educação Física</option>
+                        <option>Música</option>
+                    </select>
                 </div>
 
                 <div class="input-field col s12 m3">

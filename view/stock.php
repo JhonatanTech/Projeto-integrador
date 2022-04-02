@@ -6,6 +6,9 @@ include '../template/message.php';
 
 include '../App/material/db_connect.php';
 
+$material   = "";
+$local      = "";
+
 ?>
 
 <style>
@@ -17,18 +20,31 @@ include '../App/material/db_connect.php';
 
 <div class="container">
     <div class="row">
-        <h1 class="center-align">Estoque</h1>
-        <form class="col s12 m12" method="POST">
-            <div class="row">
-                <div class="input-field col s12 m3">
-                    <input id="search" type="text" class="validate" name="pesquisa-material">
-                    <label for="search">Pesquisar</label>
+        <div class="row">
+            <h1 class="center-align">Estoque</h1>
+            <form class="col s12 m12" method="POST">
+                <div class="row">
+                    <div class="input-field col s12 m3">
+                        <i class="material-icons prefix">title</i>
+                        <input id="search" type="text" class="validate" name="pesquisa-material">
+                        <label for="search">Pesquisar</label>
+                    </div>
+                    <div class="input-field col s10 m4">
+                        <i class="material-icons prefix">place</i>
+                        <select id="pesquisa-local" name="pesquisa-local">
+                            <option value="" disabled selected>Local de armazenamento</option>
+                            <option>Direção</option>
+                            <option>Limpeza</option>
+                            <option>Educação Física</option>
+                            <option>Música</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s2 m1">
+                        <button class="btn-floating pink waves-effect waves-light"><i class="material-icons">search</i></button>
+                    </div>
                 </div>
-                <div class="input-field col s12 m3">
-                    <button class="btn-floating pink waves-effect waves-light"><i class="material-icons">search</i></button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
 
         <table class="centered responsive-table striped">
             <thead>
@@ -36,7 +52,7 @@ include '../App/material/db_connect.php';
                     <th>Id</th>
                     <th>Imagem</th>
                     <th>Nome do material</th>
-                    <th>Local de armazenamento</th>
+                    <th>Almoxarifado</th>
                     <th>Quantidade</th>
                     <th>Observação</th>
                     <th>Ações</th>
@@ -46,17 +62,18 @@ include '../App/material/db_connect.php';
             <tbody>
 
                 <?php
-
                 if (isset($_POST['pesquisa-material'])) {
-                    $sql = "SELECT * FROM material WHERE nome LIKE '%". $_POST['pesquisa-material'] ."%'";
-                }else {
-                    $sql = "SELECT * FROM material ORDER BY id DESC";
+                    $material = $_POST['pesquisa-material'];
                 }
+                if (isset($_POST['pesquisa-local'])) {
+                    $local = $_POST['pesquisa-local'];
+                }
+
+                $sql = "SELECT * FROM material WHERE nome LIKE '%$material%' and local LIKE '%$local%'";
 
                 $resultado = mysqli_query($connect, $sql);
 
                 if (mysqli_num_rows($resultado) > 0) :
-
                     while ($dados = mysqli_fetch_array($resultado)) : ?>
 
                         <tr>
@@ -74,7 +91,7 @@ include '../App/material/db_connect.php';
                                 <a href="#modal<?php echo $dados['id']; ?>" class="btn-floating red modal-trigger waves-effect waves-light tooltipped" data-position="right" data-tooltip="Deletar"><i class="material-icons">delete</i></a>
                             </td>
 
-                            <!-- Modal Structure -->
+                            <!-- Modal Deletar -->
                             <div id="modal<?php echo $dados['id']; ?>" class="modal">
                                 <div class="modal-content">
                                     <h4>Opa!</h4>
@@ -86,12 +103,11 @@ include '../App/material/db_connect.php';
                                         <button type="submit" name="btn-deletar-material" class="btn red">Sim, quero deletar</button>
 
                                         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
-
                                     </form>
                                 </div>
                             </div>
 
-                            <!-- Modal Structure -->
+                            <!-- Modal Observação -->
                             <div id="obs-modal<?php echo $dados['id']; ?>" class="modal">
                                 <div class="modal-content">
                                     <h4>Observação</h4>
@@ -101,8 +117,8 @@ include '../App/material/db_connect.php';
                                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
                                 </div>
                             </div>
-
                         </tr>
+
                     <?php
                     endwhile;
                 else : ?>
