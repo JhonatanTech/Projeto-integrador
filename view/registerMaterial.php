@@ -41,7 +41,7 @@ include '../template/menu.html';
 
                 <div class="input-field col s12 m3">
                     <i class="material-icons prefix">pin</i>
-                    <input id="qty" name="qty" type="number" class="validate">
+                    <input id="qty" name="qty" type="number" class="validate" min="1">
                     <label for="qty">Quantidade</label>
                 </div>
 
@@ -51,7 +51,7 @@ include '../template/menu.html';
                     <label for="obs">Observação</label>
                 </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" name="btn-cadastrar-material" class="waves-effect waves-light btn-large pink">Cadastrar</button>
+                    <button type="submit" name="btn-cadastrar-material" class="waves-effect waves-light btn-large pink disabled">Cadastrar</button>
                 </div>
             </div>
         </form>

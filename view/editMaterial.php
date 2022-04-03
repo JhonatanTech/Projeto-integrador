@@ -49,7 +49,7 @@ endif;
 
                 <div class="input-field col s12 m3">
                     <i class="material-icons prefix">pin</i>
-                    <input id="qty" name="qty" type="number" class="validate" value="<?php echo $dados['qtd']; ?>">
+                    <input id="qty" name="qty" type="number" class="validate" value="<?php echo $dados['qtd']; ?>" min="1">
                     <label for="qty">Quantidade</label>
                 </div>
 
