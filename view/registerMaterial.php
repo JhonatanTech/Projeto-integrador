@@ -51,7 +51,7 @@ include '../template/menu.html';
                     <label for="obs">Observação</label>
                 </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" name="btn-cadastrar-material" class="waves-effect waves-light btn-large pink disabled">Cadastrar</button>
+                    <button type="submit" name="btn-cadastrar-material" class="waves-effect waves-light btn-large pink">Cadastrar</button>
                 </div>
             </div>
         </form>
