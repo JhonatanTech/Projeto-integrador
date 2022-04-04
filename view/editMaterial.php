@@ -35,11 +35,11 @@ endif;
                     <label for="nome">Nome do material</label>
                 </div>
 
+
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">place</i>
-                    <!-- <input id="local" name="local" type="text" class="validate"> -->
-                    <select id="local" name="local">
-                        <option value="" disabled selected>Local de armazenamento</option>
+                    <select id="local" name="local" required>
+                        <option value="<?php echo $dados['local']; ?>" selected><?php echo $dados['local']; ?></option>
                         <option>Direção</option>
                         <option>Limpeza</option>
                         <option>Educação Física</option>

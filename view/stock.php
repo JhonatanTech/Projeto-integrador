@@ -52,7 +52,7 @@ $local      = "";
                     <th>Id</th>
                     <th>Imagem</th>
                     <th>Nome do material</th>
-                    <th>Almoxarifado</th>
+                    <th>Local de armazenamento</th>
                     <th>Quantidade</th>
                     <th>Observação</th>
                     <th>Ações</th>
@@ -69,7 +69,7 @@ $local      = "";
                     $local = $_POST['pesquisa-local'];
                 }
 
-                $sql = "SELECT * FROM material WHERE nome LIKE '%$material%' and local LIKE '%$local%' ORDER BY id DESC";
+                $sql = "SELECT * FROM material WHERE nome LIKE '%$material%' AND local LIKE '%$local%' ORDER BY id DESC";
 
                 $resultado = mysqli_query($connect, $sql);
 

@@ -19,6 +19,8 @@ if(isset($_POST['btn-cadastrar-material'])):
 	$qty 	= clear($_POST['qty']);
 	$obs 	= clear($_POST['obs']);
 
+	$qtyConvertido = intval($_POST['qty']);
+
 	$extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensao do arquivo
 	$diretorio = "../../upload/"; //define o diretorio para onde enviaremos o arquivo
 	$novo_nome = md5(time()) . $extensao; //define o nome do arquivo
