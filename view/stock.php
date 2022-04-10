@@ -8,15 +8,7 @@ include '../App/material/db_connect.php';
 
 $material   = "";
 $local      = "";
-
 ?>
-
-<style>
-    body>div.container>div>table>thead>tr>th:nth-child(2) {
-        margin: 0 auto;
-        height: 100px;
-    }
-</style>
 
 <div class="container">
     <div class="row">
@@ -27,9 +19,9 @@ $local      = "";
                     <div class="input-field col s12 m3">
                         <i class="material-icons prefix">title</i>
                         <input id="search" type="text" class="validate" name="pesquisa-material">
-                        <label for="search">Pesquisar</label>
+                        <label for="search">Material</label>
                     </div>
-                    <div class="input-field col s10 m4">
+                    <div class="input-field col s12 m4">
                         <i class="material-icons prefix">place</i>
                         <select id="pesquisa-local" name="pesquisa-local">
                             <option value="" disabled selected>Local de armazenamento</option>
@@ -39,8 +31,10 @@ $local      = "";
                             <option>Música</option>
                         </select>
                     </div>
-                    <div class="input-field col s2 m1">
-                        <button class="btn-floating pink waves-effect waves-light"><i class="material-icons">search</i></button>
+                    <div class="input-field col s12 m2">
+                        <button class="btn-floating pink waves-effect waves-light tooltipped" data-position="top" data-tooltip="Pesquisar"><i class="material-icons">search</i></button>
+                        <a href="stock.php" class="btn-floating waves-effect waves-light red tooltipped" data-position="top" data-tooltip="Limpar pesquisa"><i class="material-icons">clear</i></a>
+                        <a href="registerMaterial.php" class="btn-floating waves-effect waves-light green tooltipped" data-position="top" data-tooltip="Adicionar material"><i class="material-icons">add</i></a>
                     </div>
                 </div>
             </form>
@@ -79,7 +73,7 @@ $local      = "";
                         <tr>
                             <td><?php echo $dados['id']; ?></td>
                             <td>
-                                <img class="responsive-img materialboxed" src="../upload/<?php echo $dados['imagem']; ?>" style="height: 60px;">
+                                <img class="responsive-img materialboxed" src="../upload/<?php echo $imagem = (file_exists('../upload/' . $dados['imagem'])) ? $dados['imagem'] : 'default.png'; ?>" style="height: 60px;">
                             </td>
                             <td><?php echo $dados['nome']; ?></td>
                             <td><?php echo $dados['local']; ?></td>
@@ -95,7 +89,7 @@ $local      = "";
                             <div id="modal<?php echo $dados['id']; ?>" class="modal">
                                 <div class="modal-content">
                                     <h4>Opa!</h4>
-                                    <p>Tem certeza que deseja excluir esse cliente?</p>
+                                    <p>Tem certeza que deseja excluir "<?php echo $dados['nome']; ?>"?</p>
                                 </div>
                                 <div class="modal-footer">
                                     <form action="../App/material/delete.php" method="POST">

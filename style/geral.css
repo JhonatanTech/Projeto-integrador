@@ -1,6 +1,7 @@
 td img.materialboxed {
     margin: 0 auto;
     height: 70px;
+    border-radius: 2px;
 }
 
 img.logo {
@@ -9,4 +10,8 @@ img.logo {
 }
 .none{
     display: none !important;
+}
+
+.img-edit{
+    width: 150px;
 }

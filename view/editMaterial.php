@@ -22,23 +22,23 @@ endif;
 
 <div class="container">
     <div class="row">
-        <h1 class="center-align">Atualizar <?php echo $dados['nome']; ?></h1>
+        <h1 class="center-align">Atualizar: <?php echo $dados['nome']; ?></h1>
 
-        <img class="circle materialboxed" src="../upload/<?php echo $dados['imagem']; ?>" alt="">
+        <img class="circle materialboxed z-depth-1 img-edit" src="../upload/<?php echo $dados['imagem']; ?>" alt="">
 
         <form class="col s12" action="../App/material/update.php" method="POST" enctype="multipart/form-data">
             <div class="row">
                 <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">title</i>
                     <input id="nome" name="nome" type="text" class="validate" value="<?php echo $dados['nome']; ?>">
                     <label for="nome">Nome do material</label>
                 </div>
 
-
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">place</i>
-                    <select id="local" name="local" required>
+                    <select id="local" name="local" class="validate" required>
                         <option value="<?php echo $dados['local']; ?>" selected><?php echo $dados['local']; ?></option>
                         <option>Direção</option>
                         <option>Limpeza</option>

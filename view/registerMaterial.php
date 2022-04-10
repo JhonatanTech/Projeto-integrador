@@ -14,10 +14,10 @@ include '../template/menu.html';
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>Imagem</span>
-                        <input type="file" required name="arquivo">
+                        <input type="file" required name="arquivo" class="validate">
                     </div>
                     <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Selecione uma imagem para este material">
+                        <input class="file-path" type="text" placeholder="Selecione uma imagem para este material">
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@ include '../template/menu.html';
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">place</i>
                     <!-- <input id="local" name="local" type="text" class="validate"> -->
-                    <select id="local" name="local">
+                    <select id="local" name="local" class="validate">
                         <option value="" disabled selected>Local de armazenamento</option>
                         <option>Direção</option>
                         <option>Limpeza</option>
