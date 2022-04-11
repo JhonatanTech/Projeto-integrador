@@ -27,21 +27,6 @@ session_start();
 <style>
     .container.login {
         display: flex !important;
-        /* margin-top: 15vh !important;
-        margin-bottom: 15vh !important; */
-    }
-
-    body::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    body::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    body::-webkit-scrollbar-thumb {
-        border-radius: 2px;
-        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
     }
 </style>
 
@@ -62,7 +47,7 @@ session_start();
             <div class="row">
                 <div class="input-field col s12">
                     <input name="usuario" id="usuario" type="text" class="validate" autofocus="">
-                    <label for="usuario">Usuário</label>
+                    <label for="usuario">Email ou CPF</label>
                 </div>
 
                 <div class="input-field col s12">
@@ -77,6 +62,20 @@ session_start();
     </div>
 </div>
 
+<footer class="page-footer blue">
+    <div class="row center">
+        <div class="col s12">
+            <h5 class="white-text">Almoxarifado BEFAMA</h5>
+            <p class="grey-text text-lighten-4">Software desenvolvido para o almoxarifado da Escola Estadual Benedito Fagundes Marques</p>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center-align">
+            Desenvolvido por Jhonatan Carvalho Torres
+        </div>
+    </div>
+</footer>
+
 <!-- Compiled and minified JavaScript -->
 <script src="js/materialize/materialize.js"></script>
 <script src="js/Materialize.js"></script>
@@ -84,6 +83,18 @@ session_start();
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
 <script>
+    const usuario = document.querySelector('#usuario')
+    usuario.addEventListener('blur', () => {
+        if (usuario.value.length == 11) {
+            $('#usuario').mask('000.000.000-00', {
+                reverse: true
+            });
+        } else {
+            $('#usuario').unmask();
+        }
+    })
 </script>
 
-<?php include 'template/footer.html'; ?>
+</body>
+
+</html>

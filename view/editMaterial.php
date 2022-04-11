@@ -24,7 +24,7 @@ endif;
     <div class="row">
         <h1 class="center-align">Atualizar: <?php echo $dados['nome']; ?></h1>
 
-        <img class="circle materialboxed z-depth-1 img-edit" src="../upload/<?php echo $dados['imagem']; ?>" alt="">
+        <img class="circle materialboxed z-depth-1 img-edit" src="../upload/<?php echo $imagem = (file_exists('../upload/' . $dados['imagem'])) ? $dados['imagem'] : 'default.png'; ?>" alt="">
 
         <form class="col s12" action="../App/material/update.php" method="POST" enctype="multipart/form-data">
             <div class="row">
