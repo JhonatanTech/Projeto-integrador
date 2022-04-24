@@ -45,9 +45,9 @@ include '../template/menu.html';
                     <label for="qty">Quantidade</label>
                 </div>
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">edit</i>
-                    <input id="obs" name="obs" type="text" class="validate">
+                    <textarea id="obs" name="obs" class="materialize-textarea" data-length="120"></textarea>
                     <label for="obs">Observação</label>
                 </div>
                 <div class="input-field col s12 m12 center">
@@ -57,5 +57,12 @@ include '../template/menu.html';
         </form>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    M.AutoInit();
+    $(document).ready(function() {
+        $('textarea#obs').characterCounter();
+    });
+</script>
 
 <?php include '../template/footer.html'; ?>

@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 include '../template/header.html';
 include '../template/menu.html';
 
+include '../App/material/db_connect.php';
 ?>
 
 <div class="container">
@@ -13,11 +14,24 @@ include '../template/menu.html';
             <div class="row">
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">title</i>
-                    <select>
-                        <option value="" disabled selected>Material</option>
-                        <option value="1">Limpeza</option>
-                        <option value="2">Direção</option>
-                        <option value="3">Sala de aula</option>
+                    <select class="icons">
+                        <option disabled selected>Material</option>
+                        <?php
+                        $sql = "SELECT * FROM material ORDER BY nome ASC";
+
+                        $resultado = mysqli_query($connect, $sql);
+
+                        if (mysqli_num_rows($resultado) > 0) :
+                            while ($dados = mysqli_fetch_array($resultado)) : ?>
+                                <option value="" data-icon="../upload/<?php echo $imagem = (file_exists('../upload/' . $dados['imagem'])) ? $dados['imagem'] : 'default.png'; ?>"><?php echo $dados['nome']; ?></option>
+                            <?php
+                            endwhile;
+                        else :
+                            ?>
+                            <option>Sem materiais</option>
+                        <?php
+                        endif;
+                        ?>
                     </select>
                 </div>
                 <div class="input-field col s12 m6">
@@ -31,7 +45,7 @@ include '../template/menu.html';
                     <label for="obs">Observação</label>
                 </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" class="waves-effect waves-light btn-large pink">Solicitar</button>
+                    <button type="submit" name="btn-solicitar-material" class="waves-effect waves-light btn-large pink">Solicitar</button>
                 </div>
             </div>
         </form>
