@@ -9,7 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almoxarifado - Befama</title>
 
-    <meta property="og:image" content="https://almoxarifado2022.herokuapp.com/img.png" />
+    <meta property="og:image:url" content="https://almoxarifado2022.herokuapp.com/img.png" />
 
     <!-- favicon -->
     <link rel="shortcut icon" href="befama.svg" type="image/x-icon">
