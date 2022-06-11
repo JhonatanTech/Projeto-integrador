@@ -1,15 +1,13 @@
 <?php
 session_start();
 ?>
-<html prefix="og: https://ogp.me/ns#">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almoxarifado - Befama</title>
-
-    <meta property="og:image:url" content="https://almoxarifado2022.herokuapp.com/img.png" />
 
     <!-- favicon -->
     <link rel="shortcut icon" href="befama.svg" type="image/x-icon">
