@@ -16,14 +16,37 @@ A proposta é um software para o gerenciamento do estoque/almoxarifado.
 * Mysql
 ### Para executar o software é necessario o uso do wampserver ou xampp
 
-## Login
+## Material
 
 ```sql
-CREATE TABLE `login`.`usuario` (
-  `usuario_id` INT NOT NULL AUTO_INCREMENT,
-  `usuario` VARCHAR(200) NOT NULL,
-  `senha` VARCHAR(32) NOT NULL,
-  PRIMARY KEY (`usuario_id`));
+DROP TABLE IF EXISTS `material`;
+CREATE TABLE IF NOT EXISTS `material` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `local` varchar(255) NOT NULL,
+  `qtd` int(11) NOT NULL,
+  `obs` varchar(255) NOT NULL,
+  `imagem` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+```
 
-  INSERT INTO `usuario` (`usuario_id`, `usuario`, `senha`) VALUES (NULL, 'teste', MD5('teste'));
+## usuario
+
+```sql
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `sobrenome` varchar(255) NOT NULL,
+  `cpf` varchar(14) NOT NULL,
+  `contato` varchar(15) NOT NULL,
+  `funcao` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `imagem` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cpf` (`cpf`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 ```
