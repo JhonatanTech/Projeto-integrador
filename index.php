@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+<html prefix="og: https://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
