@@ -89,9 +89,11 @@ session_start();
             $('#usuario').mask('000.000.000-00', {
                 reverse: true
             });
-        } else {
-            $('#usuario').unmask();
         }
+    })
+
+    usuario.addEventListener('focus', () => {
+        $('#usuario').unmask();
     })
 </script>
 
