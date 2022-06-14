@@ -1,17 +1,37 @@
-td img.materialboxed {
-    margin: 0 auto;
-    height: 70px;
-    border-radius: 2px;
+img{
+    height: auto;
+    width: auto;
 }
 
-img.logo {
-    height: 40px;
-    margin-top: 10px;
-}
-.none{
-    display: none !important;
+.container{
+    overflow: hidden;
 }
 
-.img-edit{
-    width: 150px;
+/*DESKTOP*/
+@media (min-width: 771px)
+    {
+        td img.materialboxed {
+        margin: 0 auto;
+        height: 70px;
+        border-radius: 2px;
+    }
+
+    img.logo {
+        height: 40px;
+        margin-top: 10px;
+    }
+    .none{
+        display: none !important;
+    }
+
+    .img-edit{
+        width: 150px;
+    }
+}
+
+/*MOBILE*/
+@media (max-width: 770px){
+    td, th {
+        padding: 15px 30px;
+    }
 }

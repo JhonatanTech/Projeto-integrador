@@ -40,7 +40,7 @@ $local      = "";
             </form>
         </div>
 
-        <table class="centered responsive-table striped">
+        <table class="centered striped">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -118,6 +118,8 @@ $local      = "";
                 else : ?>
 
                     <tr>
+                        <td>-</td>
+                        <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>

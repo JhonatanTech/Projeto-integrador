@@ -1,0 +1,24 @@
+{
+  "name": "projeto-integrador",
+  "version": "1.0.0",
+  "description": "Projeto destinado ao Projeto Integrador e TG da Faculdade de Tecnologia de São Paulo no curso de Gestão da Tecnologia da Informação na Unidade de Franco da Rocha <br><br>\r Este Projeto esta destinado a resolver uma problemática na Escola Estadual Benedito fagundes Marques, localizada no centro da cidade.<br><br>\r A proposta é um software para o gerenciamento do estoque/almoxarifado.",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "uglify-js": "^3.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonatanTech/Projeto-integrador.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonatanTech/Projeto-integrador/issues"
+  },
+  "homepage": "https://github.com/JhonatanTech/Projeto-integrador#readme"
+}
