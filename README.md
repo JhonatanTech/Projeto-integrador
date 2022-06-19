@@ -11,10 +11,18 @@ A proposta é um software para o gerenciamento do estoque/almoxarifado.
 * jQuery
 * Materialize
 * Mask-plugin jQuery
+* NodeJs
+* NPM
 ### Back-end
 * PHP
 * Mysql
 ### Para executar o software é necessario o uso do wampserver ou xampp
+
+# Inicialização
+
+```
+npm install
+```
 
 ## Material
 
@@ -29,11 +37,7 @@ CREATE TABLE IF NOT EXISTS `material` (
   `imagem` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
-```
 
-## usuario
-
-```sql
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
