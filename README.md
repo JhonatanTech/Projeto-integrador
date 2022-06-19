@@ -20,8 +20,22 @@ A proposta é um software para o gerenciamento do estoque/almoxarifado.
 
 # Inicialização
 
-```
+```sh
 npm install
+```
+
+## Gulp - atualizando para v5
+
+Agora é necessário instalar explicitamente um compilador Sass.
+
+```sh
+npm install gulp-sass sass
+```
+
+As tarefas do Gulp também precisarão ser atualizadas para usar o compilador Sass instalado
+
+```js
+const sass = require('gulp-sass')(require('sass'));
 ```
 
 ## Material
