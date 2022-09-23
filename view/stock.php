@@ -4,7 +4,7 @@ include '../template/header.html';
 include '../template/menu.html';
 include '../template/message.php';
 
-include '../App/material/db_connect.php';
+include '../App/db_connect.php';
 
 $material   = "";
 $local      = "";

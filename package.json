@@ -1,0 +1,40 @@
+{
+  "name": "projeto-integrador",
+  "version": "1.0.0",
+  "description": "Projeto destinado ao Projeto Integrador e TG da Faculdade de Tecnologia de São Paulo no curso de Gestão da Tecnologia da Informação na Unidade de Franco da Rocha <br><br>\r Este Projeto esta destinado a resolver uma problemática na Escola Estadual Benedito fagundes Marques, localizada no centro da cidade.<br><br>\r A proposta é um software para o gerenciamento do estoque/almoxarifado.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "__comentaio1__": "esse script é criado para resumir o comando seguinte do pacote uglify-js, para executa é: npm run test-script",
+    "test-script": "uglifyjs clipboard.js -c -o clipboard.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonatanTech/Projeto-integrador.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonatanTech/Projeto-integrador/issues"
+  },
+  "homepage": "https://github.com/JhonatanTech/Projeto-integrador#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "jimp": "^0.16.1",
+    "jquery": "^3.6.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "sass": "^1.52.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp-babel": "^7.0.1"
+  }
+}

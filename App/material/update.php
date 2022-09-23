@@ -2,7 +2,7 @@
 // Sessão
 session_start();
 // Conexão
-require_once 'db_connect.php';
+require_once '../db_connect.php';
 
 if(isset($_POST['btn-editar-material'])){
 	$nome 	= mysqli_escape_string($connect, $_POST['nome']);
