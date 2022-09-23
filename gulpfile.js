@@ -19,7 +19,7 @@ const csso = require('gulp-csso');
 //função para compilar SASS e adicionar os prefixos
 function compilaSass() {
     return gulp
-        .src('./style/**/*.scss')
+        .src('./style/sass/**/*.scss')
         .pipe(sass({
             outputStyle: 'compressed'
         }))
@@ -27,14 +27,15 @@ function compilaSass() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('style/view'))
-        .pipe(browserSync.stream())//onde manda a tarefa pro browser
+        .pipe(csso())
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest('style/'))
 }
 //Tarefa de gulp para a função de SASS
 exports.compilaSass = compilaSass
 
 function css() {
-    gulp
+    return gulp
         .src('style/**/*.css')
         .pipe(concat('style.css'))
         .pipe(autoprefixer({
