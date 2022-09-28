@@ -13,13 +13,8 @@ session_start();
     <link rel="shortcut icon" href="befama.svg" type="image/x-icon">
     <link rel="icon" href="befama.svg" type="image/x-icon">
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="style/materialize/materialize.css">
-
     <!-- CSS  -->
-    <link rel="stylesheet" href="style/geral.css">
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/view/profile.css">
+    <link rel="stylesheet" href="style/style.css">
 
     <!--Icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -77,12 +72,14 @@ session_start();
     </div>
 </footer>
 
+<script src="js/script.js"></script>
+
 <!-- Compiled and minified JavaScript -->
-<script src="js/materialize/materialize.js"></script>
+<!-- <script src="js/materialize/materialize.js"></script>
 <script src="js/Materialize.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+<script src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script> -->
 <script>
     const usuario = document.querySelector('#usuario')
     usuario.addEventListener('blur', () => {

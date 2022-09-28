@@ -3,7 +3,7 @@
 include '../template/header.html';
 include '../template/menu.html';
 
-include_once '../App/material/db_connect.php';
+include_once '../App/db_connect.php';
 
 if (isset($_GET['id'])) :
     $id = mysqli_escape_string($connect, $_GET['id']);
@@ -13,12 +13,6 @@ if (isset($_GET['id'])) :
     $dados = mysqli_fetch_array($resultado);
 endif;
 ?>
-
-<style>
-    img.circle.materialboxed {
-        margin: 40px auto 60px auto;
-    }
-</style>
 
 <div class="container">
     <div class="row">

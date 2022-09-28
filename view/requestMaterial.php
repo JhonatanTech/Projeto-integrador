@@ -3,7 +3,7 @@
 include '../template/header.html';
 include '../template/menu.html';
 
-include '../App/material/db_connect.php';
+include '../App/db_connect.php';
 ?>
 
 <div class="container">

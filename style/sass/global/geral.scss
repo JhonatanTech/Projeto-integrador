@@ -7,6 +7,15 @@ img{
     overflow: hidden;
 }
 
+img.logo {
+    height: 40px;
+    margin-top: 10px;
+}
+
+img.circle.materialboxed {
+    margin: 40px auto 60px auto;
+}
+
 /*DESKTOP*/
 @media (min-width: 771px)
     {

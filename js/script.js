@@ -1,0 +1,1 @@
+"use strict";var _jquery=require("jquery");(0,_jquery.jquery)(),materialize();
