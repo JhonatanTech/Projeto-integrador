@@ -1,10 +1,11 @@
 <?php
 
+// include '../App/login/verifica_login.php';
 include '../template/header.html';
 include '../template/menu.html';
 include '../template/message.php';
 
-include '../App/db_connect.php';
+include_once ('../App/db_connect.php');
 
 $material   = "";
 $local      = "";

@@ -48,8 +48,8 @@ exports.js = js
 
 //Função de watch do gulp(nativo do gulp)
 function watch() {
-    gulp.watch('style/**/*.scss', sass)
-    gulp.watch(['js/**/*.js', '!js/script.js'], js)//não ficara atento a mais.js, senão ficara em loop infinito
+    gulp.watch('./style/sass/**/*.scss', sass)
+    gulp.watch(['./js/**/*.js', '!./js/script.js'], js)//não ficara atento a mais.js, senão ficara em loop infinito
 }
 //Inicia a tarefa de watch
 exports.watch = watch
