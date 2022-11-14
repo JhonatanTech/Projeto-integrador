@@ -58,7 +58,7 @@ include '../template/menu.html';
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" name="btn-cadastrar-usuario" class="waves-effect waves-light btn-large pink">Cadastrar</button>
+                    <button type="submit" name="btn-cadastrar-usuario" class="waves-effect waves-light btn-large green darken-4">Cadastrar</button>
                 </div>
             </div>
         </form>

@@ -51,14 +51,14 @@ session_start();
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-field col s12 center">
-                    <button type="submit" class="waves-effect waves-light btn-large pink">Entrar</button>
+                    <button type="submit" class="waves-effect waves-light btn-large green darken-4">Entrar</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 
-<footer class="page-footer blue">
+<footer class="page-footer green">
     <div class="row center">
         <div class="col s12">
             <h5 class="white-text">Almoxarifado BEFAMA</h5>

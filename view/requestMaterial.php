@@ -46,7 +46,7 @@ include '../App/db_connect.php';
                     <label for="obs">Observação</label>
                 </div>
                 <div class="input-field col s12 m12 center">
-                    <button type="submit" name="btn-solicitarf-material" class="waves-effect waves-light btn-large pink">Solicitar</button>
+                    <button type="submit" name="btn-solicitarf-material" class="waves-effect waves-light btn-large green darken-4">Solicitar</button>
                 </div>
             </div>
         </form>
