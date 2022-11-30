@@ -1,5 +1,5 @@
 <?php
-// include '../App/login/verifica_login.php';
+include '../App/login/verifica_login.php';
 include '../template/header.html';
 include '../template/menu.html';
 ?>
