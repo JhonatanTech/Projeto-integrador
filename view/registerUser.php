@@ -32,7 +32,7 @@ include '../template/menu.html';
                 </div>
                 <div class="input-field col s12 m6">
                     <i class="material-icons prefix">person</i>
-                    <input id="cpf" type="text" class="validate" name="cpf">
+                    <input id="cpf" type="text" class="validate" name="cpf" data-mask="000.000.000-00">
                     <label for="cpf">CPF</label>
                 </div>
                 <div class="input-field col s12 m6">
@@ -66,3 +66,12 @@ include '../template/menu.html';
 </div>
 
 <?php include '../template/footer.html'; ?>
+<script>
+    $('#contato').mask('(00) 0000-00000');
+    const contato = document.querySelector('#contato')
+    contato.addEventListener('blur', () => {
+        if (contato.value.length == 10) {
+            $('#contato').mask('(00) 0000-0000');
+        }
+    })
+</script>

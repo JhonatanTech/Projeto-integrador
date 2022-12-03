@@ -5,7 +5,7 @@ include '../template/header.html';
 include '../template/menu.html';
 include '../template/message.php';
 
-include_once ('../App/db_connect.php');
+include_once('../App/db_connect.php');
 
 $material   = "";
 $local      = "";
@@ -41,7 +41,7 @@ $local      = "";
             </form>
         </div>
 
-        <table class="centered striped">
+        <table class="centered striped responsive-table">
             <thead>
                 <tr>
                     <th>Id</th>
